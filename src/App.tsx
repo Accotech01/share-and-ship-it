@@ -15,6 +15,7 @@ import ItemDetailPage from "./pages/ItemDetailPage";
 import DonateItemPage from "./pages/DonateItemPage";
 import DashboardPage from "./pages/DashboardPage";
 import HowItWorksPage from "./pages/HowItWorksPage";
+import SpecialRequestsPage from "./pages/SpecialRequestsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => {
                 <Route path="/donate" element={<DonateItemPage />} />
                 <Route path="/dashboard" element={<DashboardPage />} />
                 <Route path="/how-it-works" element={<HowItWorksPage />} />
+                <Route path="/special-requests" element={<SpecialRequestsPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>
@@ -62,4 +64,3 @@ const App = () => {
 };
 
 export default App;
-

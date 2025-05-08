@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
-import { Menu, X, LogOut, Heart, Gift, User, Search } from 'lucide-react';
+import { Menu, X, LogOut, Heart, Gift, User, Search, MessageSquare } from 'lucide-react';
 
 const Navbar = () => {
   const { currentUser, logout } = useAuth();
@@ -23,6 +23,9 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/browse" className="text-gray-700 hover:text-brand-green px-3 py-2 rounded-md transition-standard">
               Browse Items
+            </Link>
+            <Link to="/special-requests" className="text-gray-700 hover:text-brand-green px-3 py-2 rounded-md transition-standard">
+              Special Requests
             </Link>
             <Link to="/how-it-works" className="text-gray-700 hover:text-brand-green px-3 py-2 rounded-md transition-standard">
               How It Works
@@ -78,6 +81,13 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               Browse Items
+            </Link>
+            <Link
+              to="/special-requests"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Special Requests
             </Link>
             <Link
               to="/how-it-works"
